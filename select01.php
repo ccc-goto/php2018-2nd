@@ -17,7 +17,7 @@ $kantou = [
 ];
 ?>
 
-<form method="post" action="receive_checkbox.php">
+<form method="post" action="receive01.php">
 関東の都県を選択<br/>
 <p>
 <select name="kantou">

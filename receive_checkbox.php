@@ -2,10 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <title>formデータ出力</title>
   </head>
 <body>
 <?php
-$kantou = [
+$pref = [
 'blank'      => '選択下さい。',
 'ibaraki'    => '茨城県',
 'tochigi'    => '栃木県',
@@ -15,18 +16,11 @@ $kantou = [
 'tokyo'      => '東京都',
 'kanagawa'   => '神奈川県',
 ];
-?>
+echo "住所は";
+$pSelect=$_POST['kantou'];
+echo $pref[$pSelect];
 
-<form method="post" action="receive_checkbox.php">
-関東の都県を選択<br/>
-<p>
-<select name="kantou">
-<?php foreach($kantou as $key => $value){ ?>
-	<option value="<?php echo $key; ?>"><?php echo $value; ?></option>
-<?php } ?>
-</select>
-</p>
-<p><input type="submit" value="送信"></p>
-</form>
+?>
 </body>
 </html>
+
